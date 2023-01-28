@@ -15,9 +15,9 @@ spec:
         app: web
     spec:
       containers:
-        image: sahakanush224/web:0.1.1
-        name: web
-        ports:
-        - containerPort: 3000
+        - image: sahakanush224/web:0.1.1
           name: web
-          protocol: TCP
+          ports:
+          - containerPort: 3000
+            name: web
+            protocol: TCP

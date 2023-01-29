@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test1
-        run: echo {{ toJson(github) }}
+        env:
+          github: ${{ toJson(github) }}
+        run: | 
+          echo $github

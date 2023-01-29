@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: test1
         env:
-          github: ${{ toJson(github) }}
+          github: ${{ toJson(github.sha) }}
         run: | 
           echo $github

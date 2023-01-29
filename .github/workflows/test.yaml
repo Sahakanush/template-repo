@@ -9,4 +9,4 @@ jobs:
         env:
           github: ${{ toJson(github.sha) }}
         run: | 
-          echo $github
+          echo $github[0, 7]

@@ -15,9 +15,9 @@ spec:
         app: web
     spec:
       containers:
-        - image: sahakanush224/goapp:0.1.0
+      - image: sahakanush224/web:91dd9ac1383856464fe8d29ddca497ff58ff9652
+        name: web
+        ports:
+        - containerPort: 8097
           name: web
-          ports:
-          - containerPort: 8097
-            name: web
-            protocol: TCP
+          protocol: TCP

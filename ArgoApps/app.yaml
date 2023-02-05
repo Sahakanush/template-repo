@@ -15,7 +15,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: sahakanush224/web:91dd9ac1383856464fe8d29ddca497ff58ff9652
+      - image: sahakanush224/web:93a82a60a01248c634d7ebb101bc60128c3aecfd
         name: web
         ports:
         - containerPort: 8097

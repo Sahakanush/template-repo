@@ -56,4 +56,4 @@ jobs:
           
           git add ArgoApps/app.yaml
           git commit -m "Change Tag"
-          git push
+          sudo git push

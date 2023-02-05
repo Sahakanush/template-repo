@@ -3,7 +3,7 @@ name: configuration
 on:
    push:
 
-jobs:    
+jobs:     
    
   
   Docker_operations:

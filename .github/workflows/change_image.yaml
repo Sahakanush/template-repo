@@ -38,17 +38,15 @@ jobs:
     steps:    
       - 
         name: Clone application repo        
-        run: |
-          git clone https://armenmelkonyan90:${{ secrets.GIT_TOKEN }}@github.com/armenmelkonyan90/demo
+        uses: actions/checkout@v3
 
       - 
         name: Change tag 
-        working-directory: demo/.github/
+        working-directory: ./.github
         run: |    
-          python3 change_tag.py ${{ secrets.DOCKERHUB_USERNAME }}/demo:$github
+          python3 change_tag.py ${{ secrets.DOCKERHUB_USERNAME }}/web:$github
       -
         name: Push new image to GitHub
-        working-directory: ./demo
         run: |
           git config --global user.name "example"
           git config --global user.email "example@gmail.com"

@@ -2,8 +2,7 @@ name: configuration
 
 on:
    push:
-env:
-   github1: ${{toJson(github.sha)}} 
+
 jobs:    
    
   
@@ -48,7 +47,7 @@ jobs:
         name: Change tag 
         working-directory: ./.github
         run: |    
-          python3 change_tag.py ${{ secrets.DOCKERHUB_USERNAME }}/web:$github
+          python3 change_tag.py ${{ secrets.DOCKERHUB_USERNAME }}/web:${{github.sha}}
       -
         name: Push new image to GitHub
         run: |

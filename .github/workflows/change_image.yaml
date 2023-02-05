@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web:${{ env.github }}          
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web:123          
   Change_manifest_image:
     runs-on: ubuntu-latest     
     needs: [Docker_operations]
